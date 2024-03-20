@@ -14,9 +14,7 @@ AdvisorName TEXT NOT NULL
 
 CREATE TABLE Student( 
 StudentID INTEGER NOT NULL PRIMARY KEY, 
-StudentName TEXT NOT NULL, 
-AdvisorID INTEGER, 
-FOREIGN KEY(AdvisorID) REFERENCES Advisor(AdvisorID)
+StudentName TEXT NOT NULL
 ); 
 
 CREATE TABLE Relationships(
@@ -34,17 +32,17 @@ INSERT INTO Advisor(AdvisorID, AdvisorName) VALUES
 (4,"Sam Reeds"), 
 (5,"Arthur Clintwood"); 
 
-INSERT INTO Student(StudentID, StudentName, AdvisorID) VALUES 
-(501,"Geek1", 1), 
-(502,"Geek2", 1), 
-(503,"Geek3", 2), 
-(504,"Geek4", 3), 
-(505,"Geek5", 4), 
-(506,"Geek6", 1), 
-(507,"Geek7", 2), 
-(508,"Geek8", 3), 
-(509,"Geek9", NULL), 
-(510,"Geek10", 4); 
+INSERT INTO Student(StudentID, StudentName) VALUES 
+(501,"Geek1"), 
+(502,"Geek2"), 
+(503,"Geek3"), 
+(504,"Geek4"), 
+(505,"Geek5"), 
+(506,"Geek6"), 
+(507,"Geek7"), 
+(508,"Geek8"), 
+(509,"Geek9"), 
+(510,"Geek10"); 
 
 INSERT INTO Relationships(StudentID, AdvisorID) VALUES
 (501, 1),
